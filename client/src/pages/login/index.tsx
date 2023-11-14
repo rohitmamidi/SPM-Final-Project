@@ -1,9 +1,8 @@
-import { useGoogleLogin } from "@react-oauth/google"
 import { useNavigate } from "react-router-dom"
 
 import { Card, Spacer, Button, Text, Container } from "@nextui-org/react"
 
-import { IconGitHub, IconGoogle } from "../../assets/icons"
+import { IconGitHub } from "../../assets/icons"
 
 const GITHUB_CLIENT_ID = import.meta.env.VITE_GITHUB_CLIENT_ID
 
@@ -14,14 +13,6 @@ const Login = () => {
 		localStorage.setItem("loginWith", "GitHub")
 		window.location.assign(`https://github.com/login/oauth/authorize?client_id=${GITHUB_CLIENT_ID}`)
 	}
-
-	const loginToGoogle = useGoogleLogin({
-		onSuccess: tokenResponse => {
-			localStorage.setItem("loginWith", "Google")
-			localStorage.setItem("accessToken", tokenResponse.access_token)
-			navigate("/home")
-		},
-	})
 
 	return (
 		<Container display='flex' alignItems='center' justify='center' css={{ minHeight: "100vh" }}>

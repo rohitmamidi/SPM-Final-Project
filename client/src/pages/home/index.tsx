@@ -101,7 +101,7 @@ const Home = () => {
 		})
 		getContributorActivity(owner,repo,access).then((resp: ContributorActivity[]) => {
 			console.log(resp)
-			setConAct(resp)
+			setConAct(Array.isArray(resp)?resp:[])
 		})
 	}
 	}
@@ -299,6 +299,7 @@ const Home = () => {
 	}
 	  {conact!=null&&conact.length!=0&&conact!=undefined?<>
 	<h2>Contributor Activity</h2>
+	{console.log(conact)}
       <Bar
         data={{
           labels: conact.map((con) => con.author.login),
