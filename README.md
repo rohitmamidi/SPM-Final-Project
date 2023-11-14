@@ -47,3 +47,13 @@ npm run dev
 
 <hr>
 
+### Command for creating client docker image
+```
+cd client
+docker build -t my-client:v1.0 .
+```
+### Command for creating backend docker image
+```
+cd backend
+docker build -t my-backend:v1.0 .
+```
