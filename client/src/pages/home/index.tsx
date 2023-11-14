@@ -87,6 +87,7 @@ const Home = () => {
 			console.log(resp)
 			setCommits(resp.filter((q) => {
 				const date = new Date(q.commit.author.date);
+				console.log(date,dateRange);
 				return date>=dateRange.startDate && date<=dateRange.endDate
 			}))
 		})
