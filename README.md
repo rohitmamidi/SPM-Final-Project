@@ -1,6 +1,6 @@
-# 👤 Login pack with RRSS
+# 👤 GITHUB ANALYTICS DASHBOARD
 
-Login app whit GitHub and Google
+Login app with GitHub
 
 ### Front-end
 * React js
@@ -13,7 +13,7 @@ Login app whit GitHub and Google
 * Express js
 * Axios
 
-### Installig
+### Installing
 backend/
 ```
 npm run install
@@ -26,13 +26,13 @@ npm run install
 ### Env Please create .env file and have the following values
 backed/.env
 ```
-VITE_GITHUB_CLIENT_ID=
-VITE_GOOGLE_CLIENT_ID=
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
 ```
 client/.env
 ```
-GITHUB_CLIENT_ID=
-GITHUB_CLIENT_SECRET=
+VITE_GITHUB_CLIENT_ID=
+VITE_GOOGLE_CLIENT_ID=
 ```
 
 ### Running app
