@@ -5,14 +5,14 @@ import { Card, Spacer, Button, Text, Container } from "@nextui-org/react"
 
 import { IconGitHub, IconGoogle } from "../../assets/icons"
 
-const GITHUB_CLIENT_ID = import.meta.env.VITE_GITHUB_CLIENT_ID
+const GITHUB_CLIENT_ID = "8b74c25d0be8b7d3363c"
 
 const Login = () => {
 	const navigate = useNavigate()
 
 	const loginToGithub = () => {
 		localStorage.setItem("loginWith", "GitHub")
-		window.location.assign(`https://github.com/login/oauth/authorize?client_id=${GITHUB_CLIENT_ID}`)
+		window.location.assign(`https://github.com/login/oauth/authorize?client_id=8b74c25d0be8b7d3363c`)
 	}
 
 	const loginToGoogle = useGoogleLogin({
@@ -43,12 +43,6 @@ const Login = () => {
 					GitHub
 				</Button>
 				<Spacer y={1} />
-
-				<Button color='gradient' auto ghost onClick={() => loginToGoogle()}>
-					<IconGoogle />
-					<Spacer x={0.5} />
-					Google
-				</Button>
 			</Card>
 		</Container>
 	)
