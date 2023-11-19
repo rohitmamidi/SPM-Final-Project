@@ -24,7 +24,7 @@ npm run install
 ```
 
 ### Env Please create .env file and have the following values
-backed/.env
+backend/.env
 ```
 GITHUB_CLIENT_ID=
 GITHUB_CLIENT_SECRET=
